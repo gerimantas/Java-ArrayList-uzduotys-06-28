@@ -1,31 +1,48 @@
-import java.util.Scanner;
+import java.util.*;
 
 public class PrimeSkaiciai {
+
+
     public static void main (String[] args) {
 
-        Scanner scanner = new Scanner(System.in);
-        int i = 0;
-        int sk =0;
-        String  primeSkaiciai = "";
-        System.out.println("Irašyk paskutinį sąrašo skaičių (n):");
-        int n = scanner.nextInt();
-        scanner.close();
+
+        Scanner skait = new Scanner(System.in);
+        int i =0;
+        int num =0;
+
+        String  primeSkaic = "";
+        System.out.println("Koks saraso ilgis n:");
+        int n = skait.nextInt();
+        skait.close();
         for (i = 1; i <= n; i++)
         {
-            int skaitiklis = 0;
-            for(sk = i; sk >= 1; sk--)
+            int numeris=0;
+            for(num =i; num>=1; num--)
             {
-                if(i % sk == 0)
+                if(i%num==0)
                 {
-                    skaitiklis = skaitiklis + 1;
+                    numeris = numeris + 1;
                 }
             }
-            if (skaitiklis ==2)
+            if (numeris ==2)
             {
-                primeSkaiciai = primeSkaiciai + i + " ";
+                primeSkaic = primeSkaic + i + " ";
             }
         }
-        System.out.println("Prime skaičiai nuo 1 iki n yra :");
-        System.out.println(primeSkaiciai);
+        System.out.println("Pirminiai skaiciai sarase nuo 1 iki " + n + " yra :");
+        System.out.println(primeSkaic);
+        String[] sarasas = new ArrayList<String>().toArray(new String[0]);
+        sarasas = primeSkaic.split(" ");
+        System.out.println("Saraso ilgis yra " + sarasas.length + " skaiciai");
+
+
     }
+
+
+
 }
+
+
+
+
+
