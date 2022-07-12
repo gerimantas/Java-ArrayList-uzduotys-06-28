@@ -2,9 +2,7 @@ import java.util.*;
 
 public class PrimeSkaiciai {
 
-
     public static void main (String[] args) {
-
 
         Scanner skait = new Scanner(System.in);
         int i =0;
@@ -37,9 +35,6 @@ public class PrimeSkaiciai {
 
 
     }
-
-
-
 }
 
 
