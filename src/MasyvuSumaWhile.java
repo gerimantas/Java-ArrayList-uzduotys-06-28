@@ -1,7 +1,7 @@
 import java.util.ArrayList;
 import java.util.Scanner;
 
-public class MasyvuSuma {
+public class MasyvuSumaWhile {
     public static void main(String[] args) {
         ArrayList<Integer> sarasas1 = new ArrayList<>();
 
@@ -60,10 +60,11 @@ public class MasyvuSuma {
     }
 
     public static int masyvoSuma(ArrayList<Integer> sarasas1) {
-
         int suma = 0;
-        for ( int i : sarasas1) {
-            suma += i;
+        int laikinaSuma = 0;
+        while (sarasas1.size() > laikinaSuma) {
+            suma += sarasas1.get(laikinaSuma);
+            laikinaSuma++;
         }
         return suma;
     }
